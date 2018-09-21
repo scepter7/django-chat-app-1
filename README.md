@@ -41,3 +41,16 @@ open multiple chat sessions in chrome, in incognito and in another browser say f
 ```
 http://127.0.0.1:8000/
 ```
+  
+Use hostname instead of 127.0.0.1  
+ edit ChatBot/settings.xml  
+  ```
+  ALLOWED_HOSTS = ['hangouts.com']
+  CHAT_WS_SERVER_HOST = values.Value('hangouts.com')
+  ```
+ edit .env  
+  ```
+  DJANGO_ALLOWED_HOSTS="hangouts.com"
+  DJANGO_CHAT_WS_SERVER_HOST="hangouts.com"
+  ```
+open chat sessions using http://hangouts.com:8000/  
